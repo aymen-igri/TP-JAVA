@@ -1,16 +1,19 @@
 //q6
 
+import java.security.PermissionCollection;
+import java.util.ArrayList;
+
 public class Département {
     private String nom;
     private Professeur chefDepartement;
-    private Personne[] membres;
+    private ArrayList<Personne> membres;
     private int nbrMembres;
 
     // a
     public Département(){
         this.nom = "";
         this.chefDepartement = null;
-        this.membres = new Personne[100];
+        this.membres = new ArrayList<>();
     }
     
     public String getNom(){return this.nom;}
@@ -39,6 +42,10 @@ public class Département {
             totale+=((Salarié)membres[i]).calculeSalaire(nbrh);
          }
          return totale;
+    }
+
+    public Personne RechercheMenbre(Personne p){
+        
     }
 
 }
